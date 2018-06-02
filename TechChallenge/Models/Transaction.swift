@@ -7,19 +7,14 @@
 //
 
 import UIKit
-import RealmSwift
 
-@objcMembers
-final class Transaction: Object {
-    dynamic var identifier: String!
-    dynamic var name: String!
-    dynamic var category: String = "other"
-    dynamic var amount: Double = 0.0
-    dynamic var date: Date!
-    dynamic var accountName: String!
-    dynamic var logoUrl: String?
-
-    override class func primaryKey() -> String? {
-        return "identifier"
-    }
+struct Transaction {
+    var id: String
+    var name: String
+    var category: String
+    var amount: Double
+    var date: Date
+    var accountName: String
+    var logoUrl: String?
+    var isRecurring: Bool
 }

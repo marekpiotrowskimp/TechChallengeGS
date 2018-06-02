@@ -18,7 +18,7 @@ $ pod install
 
 ## Instructions
 1. Open the `MarcusTechChallenge.xcworkspace` file with Xcode.
-2. Code the provided `transaction_detail_list_expanded.png` file under **Resources**.
+2. Code the provided `transaction_list_expanded.png` file under **Resources**.
 
 ## Rules
 - All views must be done in code and not in **Interface Builder**.

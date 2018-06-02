@@ -7,10 +7,9 @@
 //
 
 import UIKit
-import RealmSwift
 
 final class ViewController: UIViewController {
-    private let transactions: [Transaction] = Transaction.fetchAll().map { $0 }
+    private let transactions = Transaction.getAll()
 
     override func viewDidLoad() {
         super.viewDidLoad()

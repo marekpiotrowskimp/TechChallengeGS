@@ -9,9 +9,9 @@
 /* Begin PBXBuildFile section */
 		05F3EBAFFF30AB6E83B65121 /* Pods_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9EAAA56FC0623F94AC6FB62 /* Pods_Tests.framework */; };
 		1A4F2238DE289455D2503185 /* Pods_TechChallenge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6594E954A5709531A03F821C /* Pods_TechChallenge.framework */; };
-		686619D5209121A900934EA0 /* transaction_detail_list_expanded.png in Resources */ = {isa = PBXBuildFile; fileRef = 686619D3209121A900934EA0 /* transaction_detail_list_expanded.png */; };
-		686619D6209121A900934EA0 /* transaction_detail_list.png in Resources */ = {isa = PBXBuildFile; fileRef = 686619D4209121A900934EA0 /* transaction_detail_list.png */; };
-		686619DA20923C7100934EA0 /* Realm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 686619D920923C7100934EA0 /* Realm.swift */; };
+		686619D5209121A900934EA0 /* transaction_list_expanded.png in Resources */ = {isa = PBXBuildFile; fileRef = 686619D3209121A900934EA0 /* transaction_list_expanded.png */; };
+		686619D6209121A900934EA0 /* transaction_list.png in Resources */ = {isa = PBXBuildFile; fileRef = 686619D4209121A900934EA0 /* transaction_list.png */; };
+		686619DA20923C7100934EA0 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 686619D920923C7100934EA0 /* Data.swift */; };
 		6889B7F4208FD9680097A8DC /* Main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6889B7F3208FD9680097A8DC /* Main.swift */; };
 		6889B7FF208FD9680097A8DC /* Main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6889B7FE208FD9680097A8DC /* Main.swift */; };
 		6889B819208FDA380097A8DC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6889B80D208FDA380097A8DC /* ViewController.swift */; };
@@ -47,9 +47,9 @@
 		43C81AE058F59E3F900BD156 /* Pods-Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Tests/Pods-Tests.release.xcconfig"; sourceTree = "<group>"; };
 		5A0DDBA3A3F071A229EB374A /* Pods-TechChallenge.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TechChallenge.release.xcconfig"; path = "Pods/Target Support Files/Pods-TechChallenge/Pods-TechChallenge.release.xcconfig"; sourceTree = "<group>"; };
 		6594E954A5709531A03F821C /* Pods_TechChallenge.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TechChallenge.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		686619D3209121A900934EA0 /* transaction_detail_list_expanded.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = transaction_detail_list_expanded.png; sourceTree = "<group>"; };
-		686619D4209121A900934EA0 /* transaction_detail_list.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = transaction_detail_list.png; sourceTree = "<group>"; };
-		686619D920923C7100934EA0 /* Realm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Realm.swift; sourceTree = "<group>"; };
+		686619D3209121A900934EA0 /* transaction_list_expanded.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = transaction_list_expanded.png; sourceTree = "<group>"; };
+		686619D4209121A900934EA0 /* transaction_list.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = transaction_list.png; sourceTree = "<group>"; };
+		686619D920923C7100934EA0 /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
 		6889B7DB208FD9650097A8DC /* TechChallenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TechChallenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6889B7EF208FD9680097A8DC /* Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6889B7F3208FD9680097A8DC /* Main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Main.swift; sourceTree = "<group>"; };
@@ -110,8 +110,8 @@
 		686619D2209121A900934EA0 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				686619D4209121A900934EA0 /* transaction_detail_list.png */,
-				686619D3209121A900934EA0 /* transaction_detail_list_expanded.png */,
+				686619D3209121A900934EA0 /* transaction_list_expanded.png */,
+				686619D4209121A900934EA0 /* transaction_list.png */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -187,7 +187,7 @@
 		6889B810208FDA380097A8DC /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				686619D920923C7100934EA0 /* Realm.swift */,
+				686619D920923C7100934EA0 /* Data.swift */,
 				6889B811208FDA380097A8DC /* Assets.xcassets */,
 				6889B812208FDA380097A8DC /* LaunchScreen.storyboard */,
 				6889B814208FDA380097A8DC /* Main.storyboard */,
@@ -228,7 +228,6 @@
 				6889B7D7208FD9650097A8DC /* Sources */,
 				6889B7D8208FD9650097A8DC /* Frameworks */,
 				6889B7D9208FD9650097A8DC /* Resources */,
-				DADD959E7F8D688F7C624D6F /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -326,9 +325,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				6889B81D208FDA380097A8DC /* Main.storyboard in Resources */,
-				686619D6209121A900934EA0 /* transaction_detail_list.png in Resources */,
+				686619D6209121A900934EA0 /* transaction_list.png in Resources */,
 				6889B81B208FDA380097A8DC /* Assets.xcassets in Resources */,
-				686619D5209121A900934EA0 /* transaction_detail_list_expanded.png in Resources */,
+				686619D5209121A900934EA0 /* transaction_list_expanded.png in Resources */,
 				6889B81C208FDA380097A8DC /* LaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -404,26 +403,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		DADD959E7F8D688F7C624D6F /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-TechChallenge/Pods-TechChallenge-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
-				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TechChallenge/Pods-TechChallenge-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -434,7 +413,7 @@
 				6889B81A208FDA380097A8DC /* AppDelegate.swift in Sources */,
 				6889B819208FDA380097A8DC /* ViewController.swift in Sources */,
 				6889B81F208FDA380097A8DC /* Transaction.swift in Sources */,
-				686619DA20923C7100934EA0 /* Realm.swift in Sources */,
+				686619DA20923C7100934EA0 /* Data.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -611,7 +590,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = AY868Z3HG2;
 				INFOPLIST_FILE = "$(SRCROOT)/TechChallenge/Supporting Files/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.marcus.ios.techchallenge;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -627,7 +609,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = AY868Z3HG2;
 				INFOPLIST_FILE = "$(SRCROOT)/TechChallenge/Supporting Files/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.marcus.ios.techchallenge;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -643,7 +628,11 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = Tests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.marcus.ios.MarcusTechChallengeTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -660,7 +649,11 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = Tests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.marcus.ios.MarcusTechChallengeTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -676,7 +669,11 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = UITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.marcus.ios.MarcusTechChallengeUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -692,7 +689,11 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = UITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.marcus.ios.MarcusTechChallengeUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;

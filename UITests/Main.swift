@@ -14,7 +14,7 @@ final class Main: XCTestCase {
         continueAfterFailure = false
         XCUIApplication().launch()
     }
-    
+
     override func tearDown() {
         super.tearDown()
     }
